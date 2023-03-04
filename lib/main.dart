@@ -1,6 +1,7 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
+import 'package:movies_app/control_screen.dart';
 import 'package:movies_app/core/services/services_locator.dart';
 import 'package:movies_app/core/utils/strings.dart';
 
@@ -22,13 +23,14 @@ class MyApp extends StatelessWidget {
       title: AppStrings.appTitle,
       theme: ThemeData.dark().copyWith(
         scaffoldBackgroundColor: Colors.grey.shade900,
-        appBarTheme: AppBarTheme(
+        appBarTheme: const AppBarTheme(
           backgroundColor:Color(0xff1e1e29) //Colors.black
         )
       ),
       debugShowCheckedModeBanner: false,
-      //home: const MainMoviesScreen(),
-      home: const MainTvScreen(),
+     home: const ControlScreen(),
+     // home: const MainMoviesScreen(),
+     // home: const MainTvScreen(),
     );
   }
 }

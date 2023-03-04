@@ -6,11 +6,9 @@ class DetailsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       body: Column(
         children: [
           Stack(
-
             children: [
               SizedBox(
                 width: double.infinity,
@@ -19,19 +17,21 @@ class DetailsScreen extends StatelessWidget {
               ),
               Align(
                   alignment: Alignment.topLeft,
-
                   child: Column(
                     children: [
-                      SizedBox(
+                      const SizedBox(
                         height: 30,
                       ),
-                      IconButton(onPressed: (){Navigator.pop(context);}, icon: Icon(Icons.arrow_back_ios)),
+                      IconButton(
+                          onPressed: () {
+                            Navigator.pop(context);
+                          },
+                          icon: const Icon(Icons.arrow_back_ios)),
                     ],
                   ))
             ],
-
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           Padding(
@@ -54,7 +54,7 @@ class DetailsScreen extends StatelessWidget {
                         width: 50,
                         height: 30,
                         decoration: BoxDecoration(
-                            color: Color(0xff424242),
+                            color: const Color(0xff424242),
                             borderRadius: BorderRadius.circular(5)),
                         child: const Center(
                             child: Text(
